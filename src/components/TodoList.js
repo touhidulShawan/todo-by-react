@@ -2,8 +2,17 @@ import React from "react";
 
 const TodoList = props => {
   return (
-    <div>
-      <h1>{props.todo}</h1>
+    <div className="todo__list">
+      {props.todo.map(todo => {
+        return (
+          <div className="list" key={props.id}>
+            <ul>
+              <input type="checkbox" onClick={props.handleCheck} />
+              <li>{todo}</li>
+            </ul>
+          </div>
+        );
+      })}
     </div>
   );
 };
