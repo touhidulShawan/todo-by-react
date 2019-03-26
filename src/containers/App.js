@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import TodoList from "../components/TodoList";
 import AddTask from "../components/AddTask";
+import "../assets/css/App.min.css";
 
 class App extends Component {
   state = {
     todoName: "",
     todo: [],
-    id: 0,
+    id: -1,
     isCompleted: false
   };
 
@@ -24,11 +25,11 @@ class App extends Component {
         id: this.state.id + 1
       }));
     } else {
-      return null;
+      return this.state;
     }
   };
 
-  handleCheckBox = () => {
+  toogleCompleted = () => {
     let check = !this.state.isCompleted;
     console.log(check);
 
@@ -37,7 +38,7 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="container">
         <AddTask
           handleInput={this.handleNewTask}
           handleChangeInput={this.handleChange}
@@ -45,10 +46,10 @@ class App extends Component {
         <TodoList
           todo={this.state.todo}
           id={this.state.id}
-          handleCheck={this.handleCheckBox}
+          handleCheck={this.toogleCompleted}
           isComplete={this.state.isCompleted}
         />
-      </React.Fragment>
+      </div>
     );
   }
 }

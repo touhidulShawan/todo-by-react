@@ -1,0 +1,2 @@
+.todo__list .list ul{list-style:none;display:block;background:#fff;-webkit-box-shadow:0 2px 30px rgba(0,0,0,0.1);box-shadow:0 2px 30px rgba(0,0,0,0.1);width:600px;margin:20px auto;padding:20px 30px;-webkit-transition:all 0.7s;transition:all 0.7s;overflow:hidden}.todo__list .list ul li{font-size:22px;color:black;text-align:center}.todo__list .list ul:hover{background:#ff1744;cursor:pointer}.todo__list .list ul:hover li{color:white}
+/*# sourceMappingURL=TodoList.min.css.map */
